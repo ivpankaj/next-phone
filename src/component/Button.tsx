@@ -7,7 +7,7 @@ const InstallButton = () => {
   const [showInstallButton, setShowInstallButton] = useState(false);
 
   useEffect(() => {
-    const handleBeforeInstallPrompt = (e:any) => {
+    const handleBeforeInstallPrompt = (e: { preventDefault: () => void; }) => {
       e.preventDefault();
       setDeferredPrompt(e);
       setShowInstallButton(true);
